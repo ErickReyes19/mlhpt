@@ -1,5 +1,4 @@
 ---
-// Nav.astro
 const navItems = [
   { name: 'Inicio', href: '/' },
   { name: 'Acerca', href: '/acerca' },
@@ -77,12 +76,14 @@ const navItems = [
       const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
       mobileMenuButton.setAttribute('aria-expanded', (!expanded).toString());
       
+      // Type assertion para acceder a style
+      const menuHeight = mobileMenuContent.scrollHeight;
       if (expanded) {
-        mobileMenu.style.height = '0px';
-        mobileMenuContent.style.opacity = '0';
+        (mobileMenu as HTMLElement).style.height = '0px';
+        (mobileMenuContent as HTMLElement).style.opacity = '0';
       } else {
-        mobileMenu.style.height = `${mobileMenuContent.scrollHeight}px`;
-        mobileMenuContent.style.opacity = '1';
+        (mobileMenu as HTMLElement).style.height = `${menuHeight}px`;
+        (mobileMenuContent as HTMLElement).style.opacity = '1';
       }
 
       // Cambiar el ícono
