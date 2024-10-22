@@ -1,7 +1,7 @@
 ---
 // src/layouts/MainLayout.astro
-import Nav from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Nav from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
 ---
@@ -10,13 +10,57 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ofrecemos servicios de mantenimiento de alta calidad en plomería, carpintería y electricidad. Contamos con un equipo profesional para asegurar un servicio rápido, eficiente y confiable."
+    />
+    <meta
+      name="description"
+      content="Ofrecemos diseños personalizados y reparaciones de alta calidad en madera para tu hogar."
+    />
+    <meta
+      name="keywords"
+      content="carpintería, muebles a medida, reparaciones de madera, decoración del hogar"
+    />
+    <meta
+      name="description"
+      content="Servicios de refrigeración para mantener tu hogar fresco y confortable. Instalaciones y reparaciones profesionales."
+    />
+    <meta
+      name="keywords"
+      content="refrigeración, aire acondicionado, servicios de climatización, mantenimiento de refrigeradores"
+    />
+    <meta
+      name="description"
+      content="Cuidamos y embellecemos tu jardín con servicios de jardinería a medida. Diseño y mantenimiento profesional."
+    />
+    <meta
+      name="keywords"
+      content="jardinería, diseño de jardines, mantenimiento de jardines, paisajismo"
+    />
+    <meta
+      name="description"
+      content="Servicios eléctricos confiables para tu hogar o negocio. Instalaciones y reparaciones seguras y eficientes."
+    />
+    <meta
+      name="keywords"
+      content="electricidad, instalación eléctrica, reparaciones eléctricas, mantenimiento eléctrico"
+    />
+    <meta
+      name="description"
+      content="Expertos en fontanería para resolver cualquier problema de tuberías y drenajes. Servicio rápido y eficaz."
+    />
+    <meta
+      name="keywords"
+      content="fontanería, reparaciones de plomería, instalaciones de tuberías, desatascos"
+    />
     <title>{title} | Tu Empresa</title>
-    <link rel="stylesheet" href="/styles/base.css"/>
+    <link rel="stylesheet" href="/src/styles/base.css" />
   </head>
   <body>
     <Nav />
     <main>
-      <slot /> <!-- Aquí irá el contenido de cada página -->
+      <slot />
     </main>
     <Footer />
   </body>
