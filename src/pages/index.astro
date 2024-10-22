@@ -1,6 +1,18 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import InfoSection from "../components/CallActionComponen.astro";
 ---
+
+<style>
+  .wave-divider path {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .wave-divider path:hover {
+    transform: scale(1.05); /* Escala el path ligeramente al hacer hover */
+  }
+</style>
 
 <MainLayout title="Inicio">
   <div
@@ -14,7 +26,12 @@ import MainLayout from "../layouts/MainLayout.astro";
       />
     </figure>
     <div class="block my-auto col-span-2 md:col-span-1 space-y-6">
-      <h1 class="text-4xl font-bold">Mantenimiento lo hacemos por tí</h1>
+      <div class="block">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-700">
+          Mantenimiento
+        </h1>
+        <h2 class="text-3xl">lo hacemos por tí</h2>
+      </div>
       <p class="py-2">
         Ofrecemos los mejores servicios de mantenimiento, respaldados por
         personal altamente calificado y comprometido con la excelencia. Nos
@@ -45,109 +62,71 @@ import MainLayout from "../layouts/MainLayout.astro";
       <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">
         Nuestros Servicios
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="p-8">
-          <div
-            class="bg-indigo-100 rounded-full w-16 h-16 flex justify-center items-center text-indigo-500 shadow-2xl"
-          >
-            <img
-              src="/svg/iconElectricidad.svg"
-              class="h-8 w-8"
-              alt="Electricista"
-            />
-          </div>
-          <h2 class="uppercase mt-6 text-indigo-500 font-medium mb-3">
-            Electricista
-          </h2>
-          <p class="font-light text-sm text-gray-500 mb-3">
-            We get insulted by others, lose trust for those others. We get back
-            stabbed by friends. It becomes harder for us to give others a hand.
-          </p>
-          <a
-            class="text-indigo-500 flex items-center hover:text-indigo-600"
-            href="/"
-          >
-            Más información
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </a>
-        </div>
-
-        <div class="p-8">
-          <div
-            class="bg-green-100 rounded-full w-16 h-16 flex justify-center items-center text-green-500 shadow-2xl"
-          >
-            <img src="/svg/iconPlomeria.svg" class="h-8 w-8" alt="plomeria" />
-          </div>
-          <h2 class="uppercase mt-6 text-green-500 font-medium mb-3">
-            Plomeria
-          </h2>
-          <p class="font-light text-sm text-gray-500 mb-3">
-            We get insulted by others, lose trust for those others. We get back
-            stabbed by friends. It becomes harder for us to give others a hand.
-          </p>
-          <a
-            class="text-green-500 flex items-center hover:text-green-600"
-            href="/"
-          >
-            Más información
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </a>
-        </div>
-        <div class="p-8">
-          <div
-            class="bg-red-100 rounded-full w-16 h-16 flex justify-center items-center text-red-500 shadow-2xl"
-          >
-            <img
-              src="/svg/iconCarpinteria.svg"
-              class="h-8 w-8"
-              alt="carpinteria"
-            />
-          </div>
-          <h2 class="uppercase mt-6 text-red-500 font-medium mb-3">
-            Carpinteria
-          </h2>
-          <p class="font-light text-sm text-gray-500 mb-3">
-            We get insulted by others, lose trust for those others. We get back
-            stabbed by friends. It becomes harder for us to give others a hand.
-          </p>
-          <a class="text-red-500 flex items-center hover:text-red-600" href="/">
-            Más información
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </a>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+        <ServiceCard
+          iconSrc="/svg/iconElectricidad.svg"
+          title="Electricidad"
+          description="Servicios eléctricos confiables para instalaciones y reparaciones. Garantizamos seguridad y eficiencia en cada proyecto."
+          linkHref="/"
+          linkText="Más información"
+          color={{
+            bgColor: "bg-indigo-100", // Fondo del icono
+            textColor: "text-indigo-500", // Color del texto
+            hoverColor: "text-indigo-600", // Color al hacer hover en el enlace
+          }}
+        />
+        <ServiceCard
+          iconSrc="/svg/iconPlomeria.svg"
+          title="Fontanería"
+          description="Soluciones eficientes para tus necesidades de fontanería. Reparamos y mantenemos sistemas de agua con calidad y confianza."
+          linkHref="/"
+          linkText="Más información"
+          color={{
+            bgColor: "bg-green-100", // Fondo del icono
+            textColor: "text-green-500", // Color del texto
+            hoverColor: "text-green-600", // Color al hacer hover en el enlace
+          }}
+        />
+        <ServiceCard
+          iconSrc="/svg/iconCarpinteria.svg"
+          title="Carpintería"
+          description="Diseños personalizados y reparaciones de alta calidad en madera para tu hogar. Creamos piezas únicas y duraderas que se adaptan a tu estilo."
+          linkHref="/"
+          linkText="Más información"
+          color={{
+            bgColor: "bg-red-100", // Fondo del icono
+            textColor: "text-red-500", // Color del texto
+            hoverColor: "text-red-600", // Color al hacer hover en el enlace
+          }}
+        />
+        <ServiceCard
+          iconSrc="/svg/iconJardineria.svg"
+          title="Jardineria"
+          description="Transformamos tu espacio exterior en un oasis verde, cuidando cada detalle para que disfrutes de un entorno natural y armonioso."
+          linkHref="/"
+          linkText="Más información"
+          color={{
+            bgColor: "bg-purple-100", // Fondo del icono
+            textColor: "text-purple-500", // Color del texto
+            hoverColor: "text-purple-600", // Color al hacer hover en el enlace
+          }}
+        />
+        <ServiceCard
+          iconSrc="/svg/iconAire.svg"
+          title="Refrigeración"
+          description="Ofrecemos soluciones integrales en refrigeración para mantener tus espacios frescos y confortables, garantizando eficiencia y un excelente servicio al cliente."
+          linkHref="/"
+          linkText="Más información"
+          color={{
+            bgColor: "bg-blue-100", // Fondo del icono
+            textColor: "text-blue-500", // Color del texto
+            hoverColor: "text-blue-600", // Color al hacer hover en el enlace
+          }}
+        />
       </div>
     </div>
   </section>
+
   <div class="wave-divider bg-blue-100">
     <svg
       data-name="Layer 1"
@@ -164,9 +143,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">
       ¿Por qué elegirnos?
     </h2>
-    <div
-      class=" grid gap-4 grid-cols-1 md:grid-cols-3 "
-    >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="grid gap-4 justify-items-center text-center md:flex-1">
         <div class="rounded-full border-4 border-amber-400 p-4">
           <svg
@@ -186,7 +163,15 @@ import MainLayout from "../layouts/MainLayout.astro";
           </svg>
         </div>
         <h3 class="text-3xl font-bold">Seguridad</h3>
-        <p>Our products are secure and private out-of-the-box</p>
+        <p>Nuestros servicios están diseñados con altos estándares de seguridad y privacidad, brindándote la confianza necesaria para disfrutar de un ambiente seguro desde el primer día.</p>        
+      </div>
+      <div class="grid gap-4 justify-items-center text-center md:flex-1">
+        <div class="rounded-full border-4 border-amber-400 p-4">
+          <img src="/svg/iconPuntual.svg" class="h-10 w-10" alt="puntual" />
+        </div>
+        <h3 class="text-3xl font-bold">Puntualidad</h3>
+        <p>Nuestro compromiso es ofrecerte servicios a tiempo, asegurando que cada proyecto se complete según lo prometido, lo que te permite planificar con confianza y tranquilidad.</p>
+        
       </div>
       <div class="grid gap-4 justify-items-center text-center md:flex-1">
         <div class="rounded-full border-4 border-amber-400 p-4">
@@ -206,7 +191,8 @@ import MainLayout from "../layouts/MainLayout.astro";
           </svg>
         </div>
         <h3 class="text-3xl font-bold">Eficiencia</h3>
-        <p>Feel good about your wallet and the environment</p>
+        <p>Optimizamos nuestros procesos para maximizar resultados, ahorrando tiempo y recursos, lo que se traduce en un servicio de alta calidad que cuida de tu bolsillo y del medio ambiente.</p>
+        
       </div>
       <div class="grid gap-4 justify-items-center text-center md:flex-1">
         <div class="rounded-full border-4 border-amber-400 p-4">
@@ -227,7 +213,8 @@ import MainLayout from "../layouts/MainLayout.astro";
           </svg>
         </div>
         <h3 class="text-3xl font-bold">Calidad</h3>
-        <p>Leading the Smart Home world for 10 years</p>
+        <p>Nos comprometemos a ofrecer productos y servicios de la más alta calidad, asegurando que cada cliente reciba lo mejor en tecnología y atención.</p>
+        
       </div>
     </div>
   </div>
@@ -243,32 +230,11 @@ import MainLayout from "../layouts/MainLayout.astro";
         class="fill-blue-100"></path>
     </svg>
   </div>
-  <section class="relative z-10 overflow-hidden bg-indigo-600 py-16 px-8">
-    <div class="container">
-        <div class="-mx-4 flex flex-wrap items-center">
-            <div class="w-full px-4 lg:w-1/2">
-                <div class="text-center lg:text-left ">
-                    <div class="mb-10 lg:mb-0 ">
-                        <h1
-                            class="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
-                            ¿Necesitas más información?</h1>
-                        <p
-                            class="w-full text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed text-white">
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-4 lg:w-1/2">
-                <div class="text-center lg:text-right"><a
-                        class="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90"
-                        href="#">Contáctano</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <span class="absolute top-0 right-0 -z-10">
-        <svg width="388" height="250" viewBox="0 0 388 220" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.05" d="M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z" fill="url(#paint0_linear_971_6910)"></path><defs><linearGradient id="paint0_linear_971_6910" x1="60.5" y1="111" x2="287" y2="111" gradientUnits="userSpaceOnUse"><stop offset="0.520507" stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient></defs></svg></span><span class="absolute top-0 right-0 -z-10"><svg width="324" height="250" viewBox="0 0 324 220" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.05" d="M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z" fill="url(#paint0_linear_971_6911)"></path><defs><linearGradient id="paint0_linear_971_6911" x1="60.5" y1="111" x2="287" y2="111" gradientUnits="userSpaceOnUse"><stop offset="0.520507" stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient></defs></svg></span><span class="absolute top-4 left-4 -z-10"><svg width="43" height="56" viewBox="0 0 43 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.5"><circle cx="40.9984" cy="1.49626" r="1.49626" transform="rotate(90 40.9984 1.49626)" fill="white"></circle><circle cx="27.8304" cy="1.49626" r="1.49626" transform="rotate(90 27.8304 1.49626)" fill="white"></circle><circle cx="14.6644" cy="1.49626" r="1.49626" transform="rotate(90 14.6644 1.49626)" fill="white"></circle><circle cx="1.49642" cy="1.49626" r="1.49626" transform="rotate(90 1.49642 1.49626)" fill="white"></circle><circle cx="40.9984" cy="14.6642" r="1.49626" transform="rotate(90 40.9984 14.6642)" fill="white"></circle><circle cx="27.8304" cy="14.6642" r="1.49626" transform="rotate(90 27.8304 14.6642)" fill="white"></circle><circle cx="14.6644" cy="14.6642" r="1.49626" transform="rotate(90 14.6644 14.6642)" fill="white"></circle><circle cx="1.49642" cy="14.6642" r="1.49626" transform="rotate(90 1.49642 14.6642)" fill="white"></circle><circle cx="40.9984" cy="27.8302" r="1.49626" transform="rotate(90 40.9984 27.8302)" fill="white"></circle><circle cx="27.8304" cy="27.8302" r="1.49626" transform="rotate(90 27.8304 27.8302)" fill="white"></circle><circle cx="14.6644" cy="27.8302" r="1.49626" transform="rotate(90 14.6644 27.8302)" fill="white"></circle><circle cx="1.49642" cy="27.8302" r="1.49626" transform="rotate(90 1.49642 27.8302)" fill="white"></circle><circle cx="40.9984" cy="40.9982" r="1.49626" transform="rotate(90 40.9984 40.9982)" fill="white"></circle><circle cx="27.8304" cy="40.9963" r="1.49626" transform="rotate(90 27.8304 40.9963)" fill="white"></circle><circle cx="14.6644" cy="40.9982" r="1.49626" transform="rotate(90 14.6644 40.9982)" fill="white"></circle><circle cx="1.49642" cy="40.9963" r="1.49626" transform="rotate(90 1.49642 40.9963)" fill="white"></circle><circle cx="40.9984" cy="54.1642" r="1.49626" transform="rotate(90 40.9984 54.1642)" fill="white"></circle><circle cx="27.8304" cy="54.1642" r="1.49626" transform="rotate(90 27.8304 54.1642)" fill="white"></circle><circle cx="14.6644" cy="54.1642" r="1.49626" transform="rotate(90 14.6644 54.1642)" fill="white"></circle><circle cx="1.49642" cy="54.1642" r="1.49626" transform="rotate(90 1.49642 54.1642)" fill="white"></circle></g>
-        </svg>
-    </span>
-</section>
+
+  <InfoSection
+    title="¿Necesitas más información?"
+    description="Contáctanos para obtener más detalles sobre nuestros servicios."
+    buttonText="Contáctanos"
+    buttonLink="#contact"
+  />
 </MainLayout>
