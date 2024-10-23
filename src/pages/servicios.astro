@@ -1,7 +1,332 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import BannerServices from "../components/bannerServices.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
+
 <MainLayout title="Servicios">
-  <h1>Nuestros Servicios</h1>
-  <p>Descripción de los servicios que ofrecemos. </p>
+  <BannerServices />
+  <div class="wave-divider bg-slate-50">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="fill-blue-100"></path>
+    </svg>
+  </div>
+  <section
+    id="features"
+    class="container mx-auto px-4 space-y-4 bg-slate-50 py-8 md:py-8 lg:py-16"
+  >
+    <div
+      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
+    >
+      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        Electricidad
+      </h2>
+
+      <p
+        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+      >
+        Nos especializamos en instalaciones, reparaciones y mantenimiento de
+        sistemas eléctricos tanto residenciales como comerciales. Garantizamos
+        seguridad, eficiencia energética y cumplimiento con las normativas para
+        asegurar el correcto funcionamiento de tus equipos eléctricos.
+      </p>
+    </div>
+
+    <div
+      class="mx-auto grid justify-center gap-4 grid-cols-1 md:max-w-[64rem] md:grid-cols-3"
+    >
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconElectricidad.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 2</h3>
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+              quos nesciunt excepturi quas doloribus perspiciatis ipsa? Repellat
+              minima a, tempora est quaerat suscipit, inventore asperiores
+              voluptatibus, voluptatum culpa obcaecati ipsam.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconElectricidad.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 2</h3>
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+              quos nesciunt excepturi quas doloribus perspiciatis ipsa? Repellat
+              minima a, tempora est quaerat suscipit, inventore asperiores
+              voluptatibus, voluptatum culpa obcaecati ipsam.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[250px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconElectricidad.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 2</h3>
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+              quos nesciunt excepturi quas doloribus perspiciatis ipsa? Repellat
+              minima a, tempora est quaerat suscipit,
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    id="features"
+    class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20"
+  >
+    <div
+      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
+    >
+      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        Fontanería
+      </h2>
+
+      <p
+        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+      >
+        Nuestro servicio de fontanería abarca desde la instalación y reparación
+        de tuberías hasta el mantenimiento de sistemas de drenaje y fontanería
+        en general. Nos comprometemos a ofrecer soluciones rápidas y efectivas,
+        asegurando un suministro de agua seguro y eficiente en tu hogar o
+        negocio.
+      </p>
+    </div>
+
+    <div
+      class="mx-auto grid justify-center gap-4 grid-cols-1 md:max-w-[64rem] md:grid-cols-3"
+    >
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconPlomeria.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 1</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconPlomeria.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 1</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconPlomeria.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 1</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wave-divider bg-blue-100">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="fill-slate-50"></path>
+    </svg>
+  </div>
+  <section
+    id="features"
+    class="container mx-auto px-4 space-y-4 bg-blue-100 py-8 md:py-8 lg:py-16"
+  >
+    <div
+      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
+    >
+      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        Electricidad
+      </h2>
+
+      <p
+        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+      >
+        Nos especializamos en instalaciones, reparaciones y mantenimiento de
+        sistemas eléctricos tanto residenciales como comerciales. Garantizamos
+        seguridad, eficiencia energética y cumplimiento con las normativas para
+        asegurar el correcto funcionamiento de tus equipos eléctricos.
+      </p>
+    </div>
+
+    <div
+      class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
+    >
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconElectricidad.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 2</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconElectricidad.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 2</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconElectricidad.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 2</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    id="features"
+    class="container mx-auto px-4 space-y-6 bg-blue-100 py-8 md:py-12 lg:py-20"
+  >
+    <div
+      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
+    >
+      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        Fontanería
+      </h2>
+
+      <p
+        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+      >
+        Nuestro servicio de fontanería abarca desde la instalación y reparación
+        de tuberías hasta el mantenimiento de sistemas de drenaje y fontanería
+        en general. Nos comprometemos a ofrecer soluciones rápidas y efectivas,
+        asegurando un suministro de agua seguro y eficiente en tu hogar o
+        negocio.
+      </p>
+    </div>
+
+    <div
+      class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
+    >
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconPlomeria.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 1</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconPlomeria.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 1</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+      >
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          <img
+            src="/svg/iconPlomeria.svg"
+            class="h-12 w-12"
+            alt="Icono de electricidad"
+          />
+          <div class="space-y-2">
+            <h3 class="font-bold">Servicio 1</h3>
+            <p class="text-sm">Información</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
