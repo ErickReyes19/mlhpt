@@ -5,7 +5,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Servicios">
   <BannerServices />
-  <div class="wave-divider bg-slate-50">
+  
+  <div class="wave-divider bg-gray-50">
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,316 +18,479 @@ import MainLayout from "../layouts/MainLayout.astro";
         class="fill-blue-100"></path>
     </svg>
   </div>
-  <section
-    id="features"
-    class="container mx-auto px-4 space-y-4 bg-slate-50 py-8 md:py-8 lg:py-16"
-  >
-    <div
-      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
-    >
-      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-screen-lg mx-auto px-4">
+      <!-- Sección de Electricidad -->
+      <h2 class="text-4xl font-bold text-blue-600 mb-6 text-center">
         Electricidad
       </h2>
-
-      <p
-        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-      >
-        Nos especializamos en instalaciones, reparaciones y mantenimiento de
-        sistemas eléctricos tanto residenciales como comerciales. Garantizamos
-        seguridad, eficiencia energética y cumplimiento con las normativas para
-        asegurar el correcto funcionamiento de tus equipos eléctricos.
+      <p class="mb-8 text-gray-700 text-center text-lg">
+        Nuestro servicio de electricidad abarca instalaciones, reparaciones y
+        mantenimiento de sistemas eléctricos, garantizando seguridad y
+        eficiencia en tu hogar o negocio.
       </p>
-    </div>
 
-    <div
-      class="mx-auto grid justify-center gap-4 grid-cols-1 md:max-w-[64rem] md:grid-cols-3"
-    >
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconElectricidad.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 2</h3>
-            <p class="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              quos nesciunt excepturi quas doloribus perspiciatis ipsa? Repellat
-              minima a, tempora est quaerat suscipit, inventore asperiores
-              voluptatibus, voluptatum culpa obcaecati ipsam.
-            </p>
+      <h3 class="text-3xl font-semibold text-gray-800 mb-4 text-center">
+        Servicios de Electricidad
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Servicio 1: Instalación de Iluminación -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 9v6m8-6v6m-8 6h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Instalación de Iluminación
+            </h4>
           </div>
+          <p class="text-gray-600">
+            Instalamos sistemas de iluminación eficientes que mejoran la
+            estética y funcionalidad de tus espacios.
+          </p>
+        </div>
+
+        <!-- Servicio 2: Reparaciones Eléctricas -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12h3m-3 0h-3m3 0v3m0-3V9m-6 12h3m-3 0h-3m3 0v3m0-3V9m-6 0h6M3 12h6m-6 0v-3m0 3v3m0-3h3"
+              ></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Reparaciones Eléctricas
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Ofrecemos reparaciones rápidas y efectivas para cualquier fallo
+            eléctrico, asegurando la seguridad de tu hogar.
+          </p>
+        </div>
+
+        <!-- Servicio 3: Mantenimiento Preventivo -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13a4 4 0 110-8 4 4 0 010 8zm0 4a8 8 0 018-8 8 8 0 018 8m-4-4h-4"
+              ></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Mantenimiento Preventivo
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Realizamos inspecciones periódicas para garantizar el correcto
+            funcionamiento de tus sistemas eléctricos y evitar problemas
+            futuros.
+          </p>
         </div>
       </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconElectricidad.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 2</h3>
-            <p class="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              quos nesciunt excepturi quas doloribus perspiciatis ipsa? Repellat
-              minima a, tempora est quaerat suscipit, inventore asperiores
-              voluptatibus, voluptatum culpa obcaecati ipsam.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[250px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconElectricidad.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 2</h3>
-            <p class="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              quos nesciunt excepturi quas doloribus perspiciatis ipsa? Repellat
-              minima a, tempora est quaerat suscipit,
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    id="features"
-    class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20"
-  >
-    <div
-      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
-    >
-      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+
+
+
+      <!-- Sección de Fontanería -->
+      <h2 class="text-4xl font-bold text-green-600 mb-6 text-center">
         Fontanería
       </h2>
-
-      <p
-        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-      >
-        Nuestro servicio de fontanería abarca desde la instalación y reparación
-        de tuberías hasta el mantenimiento de sistemas de drenaje y fontanería
-        en general. Nos comprometemos a ofrecer soluciones rápidas y efectivas,
-        asegurando un suministro de agua seguro y eficiente en tu hogar o
-        negocio.
+      <p class="mb-8 text-gray-700 text-center text-lg">
+        Ofrecemos servicios de fontanería profesionales, incluyendo instalación,
+        reparación y mantenimiento de sistemas de agua, garantizando calidad y
+        eficiencia en cada trabajo.
       </p>
-    </div>
 
-    <div
-      class="mx-auto grid justify-center gap-4 grid-cols-1 md:max-w-[64rem] md:grid-cols-3"
-    >
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconPlomeria.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 1</h3>
-            <p class="text-sm">Información</p>
+      <h3 class="text-3xl font-semibold text-gray-800 mb-4 text-center">
+        Servicios de Fontanería
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Servicio 1: Instalación de Tuberías -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h8M8 16h8M8 8h8M5 12h1m-1 4h1m-1-8h1"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Instalación de Tuberías
+            </h4>
           </div>
+          <p class="text-gray-600">
+            Instalamos tuberías de agua y desagüe para asegurar un flujo
+            adecuado y eficiente.
+          </p>
+        </div>
+
+        <!-- Servicio 2: Reparaciones de Fugas -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M5 16h14M5 8h14"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Reparaciones de Fugas
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Detectamos y reparamos fugas de agua, asegurando un ambiente seco y
+            seguro.
+          </p>
+        </div>
+
+        <!-- Servicio 3: Mantenimiento de Sistemas de Agua -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 10h18M3 14h18M3 18h18"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Mantenimiento de Sistemas de Agua
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Ofrecemos mantenimiento preventivo para asegurar el correcto
+            funcionamiento de tus sistemas hidráulicos.
+          </p>
         </div>
       </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconPlomeria.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 1</h3>
-            <p class="text-sm">Información</p>
+      </div>
+      <div class="wave-divider bg-blue-100">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="fill-gray-50"></path>
+        </svg>
+      </div>
+      <div class=" mx-auto px-4 bg-blue-100">
+
+      <!-- Sección de Carpintería -->
+       <div class="max-w-screen-lg mx-auto px-4">
+
+
+      <h2 class="text-4xl font-bold text-brown-600 mb-6 text-center">
+        Carpintería
+      </h2>
+      <p class="mb-8 text-gray-700 text-center text-lg">
+        Brindamos soluciones de carpintería personalizadas, desde muebles a
+        medida hasta reparaciones, con atención al detalle y calidad en cada
+        proyecto.
+      </p>
+
+      <h3 class="text-3xl font-semibold text-gray-800 mb-4 text-center">
+        Servicios de Carpintería
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Servicio 1: Muebles a Medida -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-brown-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M5 16h14M5 8h14"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Muebles a Medida
+            </h4>
           </div>
+          <p class="text-gray-600">
+            Diseñamos y fabricamos muebles personalizados que se adaptan a tus
+            necesidades y estilo.
+          </p>
+        </div>
+
+        <!-- Servicio 2: Reparaciones de Muebles -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-brown-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M5 16h14M5 8h14"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Reparaciones de Muebles
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Realizamos reparaciones para devolver la funcionalidad y estética a
+            tus muebles dañados.
+          </p>
+        </div>
+
+        <!-- Servicio 3: Instalación de Puertas y Ventanas -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-brown-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12h18M3 16h18M3 8h18"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Instalación de Puertas y Ventanas
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Instalamos puertas y ventanas de calidad para mejorar la seguridad y
+            eficiencia de tu hogar.
+          </p>
         </div>
       </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconPlomeria.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 1</h3>
-            <p class="text-sm">Información</p>
+      <!-- Sección de Jardinería -->
+      <h2 class="text-4xl font-bold text-blue-600 mb-6 text-center">
+        Jardinería
+      </h2>
+      <p class="mb-8 text-gray-700 text-center text-lg">
+        Transformamos tus espacios exteriores en lugares de ensueño con nuestros
+        servicios de jardinería. Desde el diseño de paisajes hasta el
+        mantenimiento regular de jardines, nuestro equipo de expertos está listo
+        para cuidar cada detalle.
+      </p>
+
+      <h3 class="text-3xl font-semibold text-gray-800 mb-4 text-center">
+        Servicios de Jardinería
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Servicio 1: Diseño y creación de jardines -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 10h18M3 14h18M3 18h18"></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Diseño y creación de jardines
+            </h4>
           </div>
+          <p class="text-gray-600">
+            Creamos jardines únicos que se adaptan a tu estilo y necesidades.
+          </p>
+        </div>
+
+        <!-- Servicio 2: Mantenimiento de césped y plantas -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2-2m0 0l2 2m-2-2v6M12 10V4m0 16v-6m-6-6l2 2m-2-2l2 2m0 0l2-2"
+              ></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Mantenimiento de césped y plantas
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Cuidamos tu jardín con servicios de riego, poda y fertilización.
+          </p>
+        </div>
+
+        <!-- Servicio 3: Poda y cuidado de árboles -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 20h10m-5-16v8m0 0h3m-3 0H8m0 0H5m2 0a3 3 0 00-3 3v1a3 3 0 003 3h10a3 3 0 003-3v-1a3 3 0 00-3-3H7z"
+              ></path>
+            </svg>
+            <h4 class="font-bold text-lg text-gray-800 ml-3">
+              Poda y cuidado de árboles
+            </h4>
+          </div>
+          <p class="text-gray-600">
+            Realizamos la poda adecuada para mantener la salud de tus árboles.
+          </p>
         </div>
       </div>
     </div>
-  </section>
-  <div class="wave-divider bg-blue-100">
-    <svg
-      data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1200 120"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-        class="fill-slate-50"></path>
-    </svg>
+      <!-- Sección de Refrigeración -->
+<h2 class="text-4xl font-bold text-blue-600 mb-6 text-center">
+  Refrigeración
+</h2>
+<p class="mb-8 text-gray-700 text-center text-lg">
+  Garantiza el confort en tu hogar o negocio con nuestros servicios de refrigeración. Ofrecemos instalación, mantenimiento y reparación de equipos de refrigeración, asegurando un servicio de calidad.
+</p>
+
+<h3 class="text-3xl font-semibold text-gray-800 mb-4 text-center">
+  Servicios de Refrigeración
+</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+  <!-- Servicio 1: Instalación de aires acondicionados -->
+  <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+      <div class="flex items-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12V4H4v8h8v8h4v-8h4z"></path>
+          </svg>
+          <h4 class="font-bold text-lg text-gray-800 ml-3">Instalación de aires acondicionados</h4>
+      </div>
+      <p class="text-gray-600">
+          Realizamos la instalación de equipos de refrigeración de forma profesional.
+      </p>
   </div>
-  <section
-    id="features"
-    class="container mx-auto px-4 space-y-4 bg-blue-100 py-8 md:py-8 lg:py-16"
-  >
-    <div
-      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
-    >
-      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-        Electricidad
-      </h2>
 
-      <p
-        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-      >
-        Nos especializamos en instalaciones, reparaciones y mantenimiento de
-        sistemas eléctricos tanto residenciales como comerciales. Garantizamos
-        seguridad, eficiencia energética y cumplimiento con las normativas para
-        asegurar el correcto funcionamiento de tus equipos eléctricos.
+  <!-- Servicio 2: Mantenimiento de sistemas de refrigeración -->
+  <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+      <div class="flex items-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6H8"></path>
+          </svg>
+          <h4 class="font-bold text-lg text-gray-800 ml-3">Mantenimiento de sistemas de refrigeración</h4>
+      </div>
+      <p class="text-gray-600">
+          Mantenemos tus equipos en óptimas condiciones para un funcionamiento eficiente.
       </p>
-    </div>
+  </div>
 
-    <div
-      class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
-    >
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconElectricidad.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 2</h3>
-            <p class="text-sm">Información</p>
-          </div>
-        </div>
+  <!-- Servicio 3: Reparación de equipos de refrigeración -->
+  <div class="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+      <div class="flex items-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18H4V6h2M18 18h2V6h-2M12 6v12m-6-6h12"></path>
+          </svg>
+          <h4 class="font-bold text-lg text-gray-800 ml-3">Reparación de equipos de refrigeración</h4>
       </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconElectricidad.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 2</h3>
-            <p class="text-sm">Información</p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconElectricidad.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 2</h3>
-            <p class="text-sm">Información</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    id="features"
-    class="container mx-auto px-4 space-y-6 bg-blue-100 py-8 md:py-12 lg:py-20"
-  >
-    <div
-      class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
-    >
-      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-        Fontanería
-      </h2>
-
-      <p
-        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-      >
-        Nuestro servicio de fontanería abarca desde la instalación y reparación
-        de tuberías hasta el mantenimiento de sistemas de drenaje y fontanería
-        en general. Nos comprometemos a ofrecer soluciones rápidas y efectivas,
-        asegurando un suministro de agua seguro y eficiente en tu hogar o
-        negocio.
+      <p class="text-gray-600">
+          Reparamos cualquier falla en tus sistemas de refrigeración de manera rápida y efectiva.
       </p>
-    </div>
+  </div>
+</div>
 
-    <div
-      class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
-    >
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconPlomeria.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 1</h3>
-            <p class="text-sm">Información</p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconPlomeria.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 1</h3>
-            <p class="text-sm">Información</p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-      >
-        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
-          <img
-            src="/svg/iconPlomeria.svg"
-            class="h-12 w-12"
-            alt="Icono de electricidad"
-          />
-          <div class="space-y-2">
-            <h3 class="font-bold">Servicio 1</h3>
-            <p class="text-sm">Información</p>
-          </div>
-        </div>
-      </div>
     </div>
+    
   </section>
 </MainLayout>
